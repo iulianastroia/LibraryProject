@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<!--THIS IS THE MAIN FXML-->
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryPackage.MenuController">
+
+    <top>
+
+        <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="_File">
+                    <items>
+                        <MenuItem fx:id="exitId" mnemonicParsing="false" onAction="#exitAction" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_View">
+                    <items>
+                        <MenuItem fx:id="fullScreenId" mnemonicParsing="false" onAction="#fullScreenAction" text="Maximize" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_Help">
+                    <items>
+                        <MenuItem fx:id="aboutId" mnemonicParsing="false" onAction="#aboutAction" text="About" />
+
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <BorderPane BorderPane.alignment="CENTER">
+            <center>
+                <BorderPane BorderPane.alignment="CENTER">
+                    <center>
+                        <BorderPane>
+                            <center>
+                                <ScrollPane BorderPane.alignment="CENTER">
+                                    <ImageView fitHeight="1300" fitWidth="2000" fx:id="imageView" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="/library_books.jpg" />
+                                        </image>
+                              <cursor>
+                                 <Cursor fx:constant="DEFAULT" />
+                              </cursor>
+                                    </ImageView>
+                                </ScrollPane>
+                            </center>
+                        </BorderPane>
+                    </center>
+                </BorderPane>
+            </center>
+        </BorderPane>
+    </center>
+    <bottom>
+
+        <HBox BorderPane.alignment="CENTER_LEFT">
+
+            <children>
+                <Button mnemonicParsing="false" prefWidth="125" text="My Account" onMouseClicked="#accountInfo"/>
+                <Button mnemonicParsing="false" prefWidth="125" text="Book Catalog" />
+                <Button mnemonicParsing="false" prefWidth="125" text="Return Book" />
+                <Button fx:id="deleteAccountId" mnemonicParsing="false" onMouseClicked="#deleteAccountAction" prefWidth="125" text="Delete Account" />
+                <Button fx:id="logoutId" mnemonicParsing="false" onMouseClicked="#logoutAction" prefWidth="125" text="Log out" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

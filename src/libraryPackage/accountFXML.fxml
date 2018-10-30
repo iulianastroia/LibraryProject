@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<!--THIS IS THE FXML FOR ACCOUNT INFORMATION-->
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryPackage.AccountController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <TableView id="tableView" fx:id="tableView" prefHeight="382.0" prefWidth="716.0">
+         </TableView>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="382.0" prefWidth="115.0" GridPane.columnIndex="1">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#updateAction" text="Update" />
+            </children>
+        </HBox>
+    </children>
+</GridPane>
